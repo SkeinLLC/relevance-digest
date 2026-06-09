@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relevance Digest — the ten security items that touch your assets, every morning</title>
+<meta name="description" content="Not a threat-intelligence platform. A daily email of the ten items that touch your assets, scored against your asset profile and PIRs. For the team that has no analyst to run a platform.">
+<style>
+  :root{--bg:#0b0f14;--panel:#11171f;--line:#1f2a36;--ink:#e8eef4;--mut:#9fb0c0;--acc:#3ea0ff;--acc2:#7ee0c0;--hi:#ffcf6b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--acc)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  header{padding:64px 0 28px}
+  .kick{color:var(--acc2);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px;margin:0 0 14px}
+  h1{font-size:40px;line-height:1.12;margin:0 0 16px;letter-spacing:-.02em}
+  .sub{font-size:19px;color:var(--mut);max-width:660px;margin:0 0 28px}
+  .cta{display:inline-block;background:var(--acc);color:#06121f;font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none}
+  .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  h2{font-size:24px;margin:0 0 8px;letter-spacing:-.01em}
+  .lede{color:var(--mut);margin:0 0 20px}
+  .issue{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .issue h3{margin:0 0 4px;font-size:16px}
+  .issue .meta{color:var(--mut);font-size:13px;margin:0 0 16px}
+  .item{padding:12px 0;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:0}
+  .score{display:inline-block;min-width:34px;text-align:center;font-weight:700;color:#06121f;background:var(--acc2);border-radius:6px;padding:1px 6px;font-size:13px;margin-right:8px}
+  .score.lo{background:#3a4756;color:var(--ink)}
+  .score.mid{background:var(--hi)}
+  .title{font-weight:600}
+  .why{color:var(--mut);font-size:14px;margin:4px 0 0}
+  .filtered{margin-top:16px;color:var(--hi);font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+  .price{font-weight:700;white-space:nowrap}
+  .buy{display:inline-block;background:var(--acc2);color:#06121f;font-weight:700;padding:8px 14px;border-radius:8px;text-decoration:none;font-size:14px}
+  .note{color:var(--mut);font-size:13px}
+  footer{padding:40px 0 70px;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+  @media(max-width:680px){h1{font-size:31px}.cta.ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kick">Relevance Digest · by Skein</p>
+    <h1>The ten security items that touch your assets. Every morning.</h1>
+    <p class="sub">Not a threat-intelligence platform. A daily email, scored against your asset profile and priority intelligence requirements, for the team that has no analyst to run a platform. 95% of the firehose doesn't touch you. We cut it.</p>
+    <a class="cta" href="#pilot">Start a free 2-week pilot</a>
+    <a class="cta ghost" href="#pricing">See pricing</a>
+  </header>
+
+  <section>
+    <h2>A real issue looks like this</h2>
+    <p class="lede">Sample built against an example subscriber profile: a mid-size insurer running an internet-facing VPN appliance, Microsoft 365 / Entra ID, a public Java web app, Splunk, CrowdStrike, and a third-party AI helpdesk connector. PIRs: ransomware staging, supply-chain compromise, edge-device exploitation, anything touching policyholder PII. Live issues pull real items each morning; scores here are illustrative.</p>
+    <div class="issue">
+      <h3>RELEVANCE DIGEST — Example Insurer</h3>
+      <p class="meta">10 items that touch your assets today · scored 0–100 · read time ~4 min</p>
+      <div class="item"><span class="score">94</span><span class="title">Edge VPN appliance: active exploitation of an auth-bypass class on your appliance family</span><p class="why">You run this appliance, internet-facing. Added to the active-exploitation list today. Confirm version, check for the patched build, hunt the post-exploitation behavior in CrowdStrike. → edge/infra</p></div>
+      <div class="item"><span class="score">89</span><span class="title">Third-party AI connector: vendor discloses a token-handling weakness in MCP-style integrations</span><p class="why">You run an AI helpdesk connector with a cloud service account. Matches your supply-chain PIR. Pull its permission scope; confirm you can revoke it in under 5 minutes. → security ops</p></div>
+      <div class="item"><span class="score">82</span><span class="title">M365 / Entra: phishing kit bypassing MFA on your identity stack, in the wild now</span><p class="why">Entra ID is your front door, and the technique is hitting insurers this quarter. Verify conditional-access posture; hunt the token-replay pattern. → identity</p></div>
+      <div class="item"><span class="score mid">76</span><span class="title">Java web stack: deserialization CVE on a library your public app likely ships</span><p class="why">Your customer-facing app runs this stack; PoC is public. SBOM check, then a patch window. → app sec</p></div>
+      <div class="item"><span class="score mid">71</span><span class="title">Ransomware crew adds the insurance sector to its leak-site targeting</span><p class="why">Sector plus your ransomware-staging PIR. Confirm backup-restore was tested this quarter; review the crew's initial-access TTPs against your edge. → IR lead</p></div>
+      <div class="item"><span class="score mid">64</span><span class="title">CISA KEV add affecting a secondary management appliance you may run</span><p class="why">Possible asset match — confirm inventory. Federal deadline implies active use. → infra</p></div>
+      <div class="item"><span class="score lo">58</span><span class="title">Infostealer logs for your domain appear on a marketplace</span><p class="why">Fresh batch tied to your domain. Force-reset matched accounts; check for session-token theft. → identity</p></div>
+      <div class="item"><span class="score lo">49</span><span class="title">Splunk: advisory on a component in your version line</span><p class="why">Your SIEM, medium severity, no exploitation yet. Schedule into the normal patch cycle. No fire drill. → detection eng</p></div>
+      <div class="item"><span class="score lo">37</span><span class="title">Sector ISAC note: BEC wave impersonating reinsurance partners</span><p class="why">Your business model. Brief finance; tighten payment-change verification. → fraud/finance</p></div>
+      <div class="item"><span class="score lo">28</span><span class="title">Background: new ATT&CK technique entry relevant to your edge-device PIR</span><p class="why">Reference, not urgent. Note for the next detection-coverage review. → detection eng</p></div>
+      <p class="filtered">Filtered out today: 213 items. The other 203 didn't touch your assets or PIRs. That's the product.</p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <table>
+      <thead><tr><th>Tier</th><th>What you get</th><th>Price</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><strong>Solo / small team</strong></td><td>Daily digest against one asset profile, by email.</td><td class="price">$49/mo</td><td><a class="buy" href="https://buy.stripe.com/eVq4gBfcD4Ea2Js47hcV20b">Subscribe</a></td></tr>
+        <tr><td><strong>Team</strong></td><td>Multiple profiles, PIR tuning, and a weekly exec roll-up.</td><td class="price">$199/mo</td><td><a class="buy" href="https://buy.stripe.com/28E14p6G77Qmfwe33dcV20c">Subscribe</a></td></tr>
+        <tr><td><strong>Pilot</strong></td><td>Two weeks of the real digest against your actual profile. Free, then convert.</td><td class="price">Free</td><td><a class="buy" href="#pilot">Start</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="pilot">
+    <h2>Start a free 2-week pilot</h2>
+    <p class="lede">Send us your asset profile and we'll run the real digest against it for two weeks. You'll see your own noise cut to ten items, every morning, before you decide whether to pay.</p>
+    <p><a class="cta" href="mailto:hello@skein-platform.com?subject=Relevance%20Digest%20pilot&body=I%27d%20like%20to%20start%20a%202-week%20pilot.%20Our%20internet-facing%20assets%3A%20...%20%2F%20Internal%20stack%3A%20...%20%2F%20Top%20PIRs%3A%20...">Request a pilot</a></p>
+    <p class="note">We only need an asset list and your top priority intelligence requirements. No platform login, no install.</p>
+  </section>
+
+  <footer>
+    <p>Relevance Digest is a Skein product, built on the pir-score relevance engine. Scoring is illustrative in this sample; live issues pull from vetted sources each morning. Questions: hello@skein-platform.com</p>
+  </footer>
+</div>
+</body>
+</html>
